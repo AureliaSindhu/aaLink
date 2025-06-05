@@ -19,6 +19,16 @@
   }
 }
 
+:root {
+  /* color palette */
+  --text: #000001;
+  --bgGray: #2c2c2b;
+  --gray: #40403F;
+  --lightGray: #D6D7CF;
+  --lightBlue: #A6C7DE;
+  --blue: #0A8BEF;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
