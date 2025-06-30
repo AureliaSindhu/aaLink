@@ -9,7 +9,7 @@ type Links = {
     category: string;
 };
 
-const links: Links[] = [
+export const links: Links[] = [
     {
         title: "Instagram",
         thumbnail: "https://www.instagram.com/aacodee/?hl=en",
