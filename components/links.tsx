@@ -6,6 +6,7 @@ type Links = {
     thumbnail: string;
     link: string;
     icon: ReactNode;
+    category: string;
 };
 
 const links: Links[] = [
@@ -14,5 +15,6 @@ const links: Links[] = [
         thumbnail: "https://www.instagram.com/aacodee/?hl=en",
         link: "https://www.instagram.com/aacodee/?hl=en",
         icon: <PenIcon />,
+        category: "Social Media",
     }
 ];
