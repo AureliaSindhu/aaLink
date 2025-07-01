@@ -1,16 +1,24 @@
-import LinkSec from "@/components/linkSec";
+"use client";
+import LinkSec from "@/components/linkSec"; 
+import SearchBar from "@/components/searchBar";
 
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-[var(--bgGray)] text-white flex flex-col items-center justify-center">
-      <section className="flex flex-col items-center justify-center gap-4">
-        <h2 className="text-2xl text-[var(--blue)] font-bold bg-[var(--lightBlue)] border-2 border-[var(--blue)] px-3 py-1 rounded-full">aacode</h2>
-        <p className="text-lg">Aurelia's personal linktree</p>
+    <div className="min-h-screen bg-[var(--bgGray)] text-white flex flex-col items-center">
+      <section className="flex flex-col items-center justify-center gap-4 mt-16">
+        <div className="flex items-center gap-2 bg-blue-500/20 backdrop-blur-lg border border-blue-500/30 px-4 py-2 rounded-full">
+          <h2 className="text-2xl text-[var(--blue)] font-bold">aacode</h2>
+          <div className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></div>
+        </div>
       </section>
 
-      <LinkSec />
-      
-      <footer className="mx-auto py-2 text-center text-sm text-neutral-500 mt-8">
+      <SearchBar />
+
+      <section className="flex-1 flex flex-col items-center justify-center w-full">
+        <LinkSec />
+      </section>
+
+      <footer className="w-full py-2 text-center text-sm text-neutral-500">
         <p>
           &copy; {new Date().getFullYear()} made with several cups of americano,
           love by{" "}
