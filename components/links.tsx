@@ -15,15 +15,22 @@ export const links: Links[] = [
     // Social Media
     {
         title: "Instagram",
-        thumbnail: "/globe.svg",
+        thumbnail: "/ig.svg",
         link: "https://www.instagram.com/aacodee/?hl=en",
         icon: <PenIcon />,
         category: "Social Media",
     },
     { 
         title: "LinkedIn",
-        thumbnail: "/globe.svg",
-        link: "https://www.linkedin.com/in/aurelia-code/",
+        thumbnail: "/linkedin.svg",
+        link: "https://www.linkedin.com/in/aurelia-sindhunirmala/",
+        icon: <PenIcon />,
+        category: "Social Media",
+    },
+    {
+        title: "Tiktok",
+        thumbnail: "/tiktok.svg",
+        link: "https://www.tiktok.com/@aacodee?_t=ZS-8xk0IvnxuEb&_r=1",
         icon: <PenIcon />,
         category: "Social Media",
     },
@@ -45,28 +52,28 @@ export const links: Links[] = [
     // Projects
     {
         title: "Toastology",
-        thumbnail: "/globe.svg",
+        thumbnail: "/toastology.png",
         link: "https://aureliasindhu.github.io/Toastology/index.html",
         icon: <PenIcon />,
         category: "Projects",
     },
     {
         title: "Dear API ",
-        thumbnail: "/globe.svg",
+        thumbnail: "/dearapi.png",
         link: "https://dear-api.vercel.app/",
         icon: <PenIcon />,
         category: "Projects",
     },
     {
         title: "ClickClack",
-        thumbnail: "/globe.svg",
+        thumbnail: "/clickclack.png",
         link: "https://clickclack-aacode.vercel.app/",
         icon: <PenIcon />,
         category: "Projects",
     },
     {
         title: "Resources Hub",
-        thumbnail: "/globe.svg",
+        thumbnail: "/resources.png",
         link: "https://resources-red.vercel.app/",
         icon: <PenIcon />,
         category: "Projects",
