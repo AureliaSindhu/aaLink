@@ -34,6 +34,13 @@ export const links: Links[] = [
         icon: <PenIcon />,
         category: "Social Media",
     },
+    {
+        title: "X",
+        thumbnail: "/x.svg", 
+        link: "https://x.com/dayswithliaa",
+        icon: <PenIcon />,
+        category: "Social Media",
+    },
     // // Productivity
     // {
     //     title: "Notion",
