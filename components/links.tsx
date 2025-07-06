@@ -41,6 +41,13 @@ export const links: Links[] = [
         icon: <PenIcon />,
         category: "Social Media",
     },
+    { 
+        title: "Spotify",
+        thumbnail: "/spotify.svg",
+        link: "https://open.spotify.com/user/3163636363636363636363636363636363636363",
+        icon: <PenIcon />,
+        category: "Social Media",
+    },
     // // Productivity
     // {
     //     title: "Notion",

@@ -14,14 +14,13 @@ export default function Landing() {
 
       <SearchBar />
 
-      <section className="flex-1 flex flex-col items-center justify-center w-full">
+      {/* <section className="flex-1 flex flex-col items-center justify-center w-full"> */}
         <LinkSec />
-      </section>
+      {/* </section> */}
 
-      <footer className="w-full py-2 text-center text-sm text-neutral-500">
+      <footer className="w-full py-2 text-center text-sm text-neutral-500 fixed bottom-0">
         <p>
-          &copy; {new Date().getFullYear()} made with several cups of americano,
-          love by{" "}
+          &copy; {new Date().getFullYear()} made by {" "}
           <a
             href="https://www.instagram.com/aacodee/?hl=en"
             target="_blank"
