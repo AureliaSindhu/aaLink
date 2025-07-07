@@ -12,22 +12,22 @@ export default function LinkSec() {
         const categoryLinks = links.filter((l) => l.category === activeCategory);
 
         return (
-            <div className="p-8 max-w-5xl mx-auto">
+            <div className="p-8 max-w-xl mx-auto">
                 <button
-                    className="flex items-center gap-2 mb-6 text-sm text-blue-400 "
+                    className="flex items-center gap-2 mb-6 text-sm text-blue-400 hover:text-blue-600"
                     onClick={() => setActiveCategory(null)}
                 >
                     <ChevronLeft className="w-4 h-4" /> Back
                 </button>
                 <h2 className="text-2xl font-semibold mb-4">{activeCategory}</h2>
-                <div className="grid grid-cols-6 gap-6">
+                <div className="grid grid-cols-4 gap-6">
                 {categoryLinks.map((link) => (
                     <Link
-                    key={link.thumbnail}
-                    href={link.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center p-2 rounded-xl hover:bg-white/10 transition"
+                        key={link.thumbnail}
+                        href={link.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center p-2 rounded-xl hover:bg-white/10 transition"
                     >
                     <Image
                         src={link.thumbnail}
@@ -59,19 +59,19 @@ export default function LinkSec() {
                     <div className="grid grid-cols-2 gap-4">
                     {catLinks.slice(0, 4).map((l) => (
                         <Link
-                        key={l.thumbnail}
-                        href={l.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center p-1 rounded-lg hover:bg-white/10 transition"
+                            key={l.thumbnail}
+                            href={l.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center p-1 rounded-lg hover:bg-white/10 transition"
                         >
-                        <Image
-                            src={l.thumbnail}
-                            width={40}
-                            height={40}
-                            alt={l.title}
-                            className="rounded-lg"
-                        />
+                            <Image
+                                src={l.thumbnail}
+                                width={40}
+                                height={40}
+                                alt={l.title}
+                                className="rounded-lg"
+                            />
                         </Link>
                     ))}
                     </div>
@@ -79,19 +79,19 @@ export default function LinkSec() {
                     <div className="grid grid-cols-2 gap-4">
                     {catLinks.slice(0, 3).map((l) => (
                         <Link
-                        key={l.thumbnail}
-                        href={l.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center p-1 rounded-lg hover:bg-white/10 transition"
+                            key={l.thumbnail}
+                            href={l.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center p-1 rounded-lg hover:bg-white/10 transition"
                         >
-                        <Image
-                            src={l.thumbnail}
-                            width={40}
-                            height={40}
-                            alt={l.title}
-                            className="rounded-lg"
-                        />
+                            <Image
+                                src={l.thumbnail}
+                                width={40}
+                                height={40}
+                                alt={l.title}
+                                className="rounded-lg"
+                            />
                         </Link>
                     ))}
 
