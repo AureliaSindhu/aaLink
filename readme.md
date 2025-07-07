@@ -1,2 +1,2 @@
-# my linktree
-> links of all i made with my own hints of americano
+# [aaLink](https://aalink.aureliasindhu.com/) : my personal linktree
+> made with 3+ cups of pistachio latte 
