@@ -1,4 +1,3 @@
-import { ElementType } from "react";
 import { PenIcon } from "lucide-react";
 
 export type LinkItem = {
@@ -6,10 +5,8 @@ export type LinkItem = {
     title: string;
     thumbnail: string;
     link: string;
-    icon: ElementType;
     category: Category;
     description?: string;
-    tags?: string[];
 };
 
 export type Category = "Social Media" | "Productivity" | "Projects";
@@ -33,56 +30,74 @@ export const linkCategories: LinkCategories = {
                 title: "Instagram",
                 thumbnail: "/ig.svg",
                 link: "https://www.instagram.com/aacodee/?hl=en",
-                icon: PenIcon,
                 category: "Social Media",
                 description: "Follow my daily life and coding journey",
-                tags: ["social", "lifestyle", "coding"]
             },
             { 
                 id: "linkedin",
                 title: "LinkedIn",
                 thumbnail: "/linkedin.svg",
                 link: "https://www.linkedin.com/in/aurelia-sindhunirmala/",
-                icon: PenIcon,
                 category: "Social Media",
                 description: "Professional profile and work experience",
-                tags: ["professional", "career", "networking"]
             },
             {
                 id: "tiktok",
                 title: "Tiktok",
                 thumbnail: "/tiktok.svg",
                 link: "https://www.tiktok.com/@aacodee?_t=ZS-8xk0IvnxuEb&_r=1",
-                icon: PenIcon,
                 category: "Social Media",
                 description: "Short-form content and tutorials",
-                tags: ["content", "tutorials", "short-form"]
             },
             {
                 id: "x",
                 title: "X",
                 thumbnail: "/x.svg", 
                 link: "https://x.com/dayswithliaa",
-                icon: PenIcon,
                 category: "Social Media",
                 description: "Thoughts and tech updates",
-                tags: ["thoughts", "tech", "updates"]
             },
             { 
                 id: "spotify",
                 title: "Spotify",
                 thumbnail: "/spotify.svg",
-                link: "https://open.spotify.com/user/3163636363636363636363636363636363636363",
-                icon: PenIcon,
+                link: "https://open.spotify.com/user/aurelia.sindhu?si=f72addd7e16f48d9",
                 category: "Social Media",
                 description: "Music I'm listening to",
-                tags: ["music", "playlists", "entertainment"]
             },
         ]
     },
     "Productivity": {
         description: "Tools and resources I use daily",
-        links: []
+        links: [
+            // {
+            //     id: "notion",
+            //     title: "Notion",
+            //     thumbnail: "/notion.png",
+            //     link: "https://www.notion.so/aureliasindhu/aaLink-1000000000000000000000000000000000000000",
+            //     icon: PenIcon,
+            //     category: "Productivity",
+            //     description: "My personal knowledge base",
+            // },
+            // {
+            //     id: "goodnotes",
+            //     title: "GoodNotes",
+            //     thumbnail: "/goodnotes.png",
+            //     link: "https://www.goodnotes.com/app/download",
+            //     icon: PenIcon,
+            //     category: "Productivity",
+            //     description: "My personal note-taking app",
+            // },
+            // {
+            //     id: "obsidian",
+            //     title: "Obsidian",
+            //     thumbnail: "/obsidian.png",
+            //     link: "https://obsidian.md/download",
+            //     icon: PenIcon,
+            //     category: "Productivity",
+            //     description: "My personal note-taking app",
+            // },
+        ]
     },
     "Projects": {
         description: "Projects I've built and worked on",
@@ -92,40 +107,32 @@ export const linkCategories: LinkCategories = {
                 title: "Toastology",
                 thumbnail: "/toastology.png",
                 link: "https://aureliasindhu.github.io/Toastology/index.html",
-                icon: PenIcon,
                 category: "Projects",
                 description: "A fun toast notification library",
-                tags: ["javascript", "library", "ui"]
             },
             {
                 id: "dear-api",
                 title: "Dear API ",
                 thumbnail: "/dearapi.png",
                 link: "https://dear-api.vercel.app/",
-                icon: PenIcon,
                 category: "Projects",
                 description: "API documentation and testing tool",
-                tags: ["api", "documentation", "testing"]
             },
             {
                 id: "clickclack",
                 title: "ClickClack",
                 thumbnail: "/clickclack.png",
                 link: "https://clickclack-aacode.vercel.app/",
-                icon: PenIcon,
                 category: "Projects",
                 description: "Interactive typing game",
-                tags: ["game", "typing", "interactive"]
             },
             {
                 id: "resources-hub",
                 title: "Resources Hub",
                 thumbnail: "/resources.png",
                 link: "https://resources-red.vercel.app/",
-                icon: PenIcon,
                 category: "Projects",
                 description: "Curated learning resources",
-                tags: ["resources", "learning", "curation"]
             },
         ]
     }
@@ -149,8 +156,7 @@ export const searchLinks = (query: string): LinkItem[] => {
     
     return allLinks.filter(link => 
         link.title.toLowerCase().includes(searchTerm) ||
-        link.description?.toLowerCase().includes(searchTerm) ||
-        link.tags?.some(tag => tag.toLowerCase().includes(searchTerm))
+        link.description?.toLowerCase().includes(searchTerm)
     );
 };
 
