@@ -12,7 +12,7 @@ export default function LinkSec() {
         const categoryLinks = links.filter((l) => l.category === activeCategory);
 
         return (
-            <div className="p-8 max-w-xl mx-auto">
+            <div className="p-8 max-w-md mx-auto">
                 <button
                     className="flex items-center gap-2 mb-6 text-sm text-blue-400 hover:text-blue-600"
                     onClick={() => setActiveCategory(null)}
@@ -36,7 +36,7 @@ export default function LinkSec() {
                         alt={link.title}
                         className="rounded-lg"
                     />
-                    <span className="mt-1 text-xs text-white/70">{link.title}</span>
+                    <span className="mt-1 text-xs text-white/70 text-center">{link.title}</span>
                     </Link>
                 ))}
                 </div>
