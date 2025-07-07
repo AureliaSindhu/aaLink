@@ -47,14 +47,14 @@ export default function SearchBar() {
 
     if (!isOpen) {
         return (
-        <div className="flex items-center justify-center w-1/4 relative py-8">
+        <div className="flex items-center justify-center w-full md:w-1/4 relative py-8 px-4 md:px-0">
             <button
                 onClick={onTriggerClick}
                 className="w-full p-2 rounded-md bg-white/10 text-center backdrop-blur-xl border border-white/20 hover:bg-white/20 transition-colors cursor-pointer flex items-center justify-center gap-2"
             >
                 <Search size={16} className=""/>
                 <span className="text-sm text-gray-300">Search Aacode Library</span>
-                <span className="text-xs text-gray-400 ml-auto">
+                <span className="text-xs text-gray-400 ml-auto hidden md:inline">
                     {navigator.platform.includes("Mac") ? "⌘K" : "Ctrl+K"}
                 </span>
             </button>
@@ -67,9 +67,20 @@ export default function SearchBar() {
         {isOpen && (
             <div className="fixed inset-0 z-40 bg-black/40 backdrop-blur-md transition-all" />
         )}
-        <div className="flex items-center justify-center w-1/4 relative py-8 z-50">
+        <div className="flex items-center justify-center w-full md:w-1/4 relative py-8 z-50 px-4 md:px-0">
             <div className="w-full relative">
-            <input
+                <button
+                    className="absolute right-2 top-2 z-50 block md:hidden text-gray-300 hover:text-white text-xl"
+                    aria-label="Close search"
+                    onClick={() => {
+                    setIsOpen(false);
+                    setQuery("");
+                    setResults([]);
+                    }}
+                >
+                    &times;
+                </button>
+                <input
                     ref={inputRef}
                     type="text"
                     value={query}
@@ -93,7 +104,7 @@ export default function SearchBar() {
                 </div>
 
                 {results.length > 0 && (
-                    <ul className="absolute z-10 mt-1 w-full overflow-auto bg-white/10 backdrop-blur-xl border border-white/20 rounded-md">
+                    <ul className="absolute z-10 mt-1 w-full overflow-auto max-h-[60vh] bg-white/10 backdrop-blur-xl border border-white/20 rounded-md">
                     {results.map((item) => (
                         <li key={item.id}>
                         <a
@@ -105,7 +116,13 @@ export default function SearchBar() {
                             setResults([]);
                             }}
                         >
-                            <Image src={item.thumbnail} width={20} height={20} alt={item.title} className="text-gray-300" />
+                            <Image
+                            src={item.thumbnail}
+                            width={20}
+                            height={20}
+                            alt={item.title}
+                            className="text-gray-300"
+                            />
                             <span className="text-sm">{item.title}</span>
                         </a>
                         </li>
